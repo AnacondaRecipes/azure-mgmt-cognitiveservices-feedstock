@@ -10,7 +10,7 @@ source:
   sha256: 915191374d0adb443863c20aaea2c9f3b9d558a849ac2b78f152249262fdcaf8
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   skip: true  # [py<39]
 
@@ -26,7 +26,7 @@ requirements:
     - azure-mgmt-core >=1.6.0
     - typing_extensions >=4.6.0
     
-tests:
+test:
   imports:
     - azure.mgmt.cognitiveservices
     - azure.mgmt.cognitiveservices.aio
